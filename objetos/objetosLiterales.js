@@ -25,7 +25,7 @@ let huesos = {
     comer: (comida)=>{
         if(comida == 'Croquetas'){
             return 'Huesos come croquetas' 
-        } else{
+        }  else{
             return 'Huesos come otra cosa'
         }
     },
