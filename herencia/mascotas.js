@@ -28,5 +28,7 @@ class Pez extends Mascota{
 }
 let firulais = new Perro('Firulais', 'verde',4,'Pug','5kg' )
 let nemo = new Pez('Nemo', 'Naranja', 'Agua Salada', '10gms', 'Pez Payaso')
-console.log(firulais.comer('Carnita'))
+console.log(firulais.comer('Carne'))
 console.log(nemo)
+
+

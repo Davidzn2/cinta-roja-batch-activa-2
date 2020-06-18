@@ -29,7 +29,7 @@ class Pelicula extends Largometraje{
 }
 class Documental extends Largometraje{
     constructor(titulo, duracion, pais, patrocinador){
-        super(titulo, duracion, )
+        super(titulo, duracion )
         this.pais = pais
         this.patrocinador = patrocinador
     }
