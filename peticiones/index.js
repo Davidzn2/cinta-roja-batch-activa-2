@@ -10,7 +10,7 @@ request('https://swapi.dev/api/people/',function(error, response, body){
     }
 })
 
-request('https://swapi.dev/api/people/1',function(error, response, body){
+request(`https://swapi.dev/api/people/1`,function(error, response, body){
     console.log(error)
     console.log(response.statusCode)
     var data = JSON.parse(body)
