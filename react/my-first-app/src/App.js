@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0); // Hook, recibe como parametro
   const [pollito, setPollitoName] = useState('Toto')
+  
   return (
     <div className="">
       <Count num={count} /> {/* num es el prop que recibe los datos */}
@@ -16,6 +17,7 @@ function App() {
         disminuir={() => setCount(count - 1)}
       />
       <p>{pollito}</p>
+      <input value={count} />
       {/* Funcion que va sumando y restando desde state */}
     </div>
   );
