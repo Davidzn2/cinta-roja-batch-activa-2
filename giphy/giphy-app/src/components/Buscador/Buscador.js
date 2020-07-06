@@ -28,7 +28,10 @@ function Buscador() {
   };
   return (
     <div>
-      <input placeholder="Busca un gif" onChange={(event)=>{setToFind(event.target.value)}} /> 
+      <input placeholder="Busca un gif" onChange={(event)=>{
+        console.log(event);
+        setToFind(event.target.value)
+        }} /> 
       {/* <button onClick={}>Busca un Gif!</button> */}
       <img src={gif} alt="Comida" />
     </div>
