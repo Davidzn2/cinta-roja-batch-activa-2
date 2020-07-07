@@ -5,10 +5,12 @@ import Footer from "../../layout/Footer/Footer";
 
 function Create() {
   const URL = "https://todos-back-devf-activa.herokuapp.com/todos/";
+  // ESTO ES EL ESTADO, AQUI ESTA LO QUE VOY A MANDAR A LA API
   const [name, setName] = useState("");
   const [done, setDone] = useState(false);
   const [priority, setPriority] = useState("");
 
+  // FUNCION QUE BORRA TODO AL ENVIAR
   const clear = () => {
     setName("");
     setDone(false);
@@ -21,15 +23,14 @@ function Create() {
     if (priority == 0) {
       alert("Tu prioridad no es valida, por favor selecciona una opcion");
     } else {
-      axios
-        .post(URL, {
+      axios.post(URL, {
           name,
           done,
           priority,
         })
         .then(() => {
           alert("Creado Con Exito");
-          clear();
+          clear(); //LLAMO A FUNCION QUE BORRA TODO AL ENVIAR
         })
         .catch((error) => {
           alert("Hubo un error, revisa que paso");
