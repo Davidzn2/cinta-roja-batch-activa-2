@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import TodoCard from "../../TodoCard/TodoCard";
+// import getData from '../../../api';
 import axios from "axios";
 function Home() {
   const [todos, setTodos] = useState([]);
@@ -16,7 +17,6 @@ function Home() {
         console.log(err);
       });
   }, []);
-
   return (
     <>
       <Header />
@@ -29,6 +29,7 @@ function Home() {
               priority={todo.priority}
               name={todo.name}
               done={todo.done}
+              _id={todo._id}
               key={todo._id}
             />
            : undefined;
@@ -41,6 +42,7 @@ function Home() {
               name={todo.name}
               done={todo.done}
               key={todo._id}
+              _id={todo._id}
             />
            : undefined;
         })}
@@ -52,6 +54,7 @@ function Home() {
               name={todo.name}
               done={todo.done}
               key={todo._id}
+              _id={todo._id}
             />
            : undefined;
         })}
