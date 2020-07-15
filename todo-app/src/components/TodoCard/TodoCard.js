@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import DeleteTodo from "../DeleteTodo/DeleteTodo";
 const TodoCard = (props) => {
   const background = {
@@ -14,6 +15,7 @@ const TodoCard = (props) => {
         </div>
         <div className="card-text">
           {props.done ? <p>Done</p> : <p>Not done</p>}
+          <Link to={props._id} >Hola </Link>
           <DeleteTodo _id={props._id} />
         </div>
       </div>
